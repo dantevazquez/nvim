@@ -6,3 +6,8 @@ vim.keymap.set('n', '<Leader>w', ':bd<CR>', { desc = 'Close current buffer' })
 
 -- Select all
 vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Select all" })
+
+-- Format the current buffer using LSP
+vim.keymap.set('n', '<leader>i', function()
+    vim.lsp.buf.format({ async = true })
+end, { desc = 'LSP format file' })
