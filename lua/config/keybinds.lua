@@ -14,3 +14,4 @@ end, { desc = 'LSP format file' })
 
 vim.keymap.set({'n', 'v', 'o'}, 'gs', '^', { desc = 'Go to first non-blank character' })
 vim.keymap.set({'n', 'v', 'o'}, 'gl', '$', { desc = 'Go to end of line' })
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to Definition' })
