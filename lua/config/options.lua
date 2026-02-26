@@ -8,6 +8,8 @@ vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.opt.magic = false
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.expand("undo")
 
 -- highlight yanking
 vim.api.nvim_create_autocmd("TextYankPost", {
