@@ -9,7 +9,16 @@ vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.opt.magic = false
 vim.opt.undofile = true
-vim.opt.undodir = vim.fn.expand("undo")
+
+-- Create a central directory for all undo files
+local undo_path = vim.fn.stdpath("data") .. "/undo"
+
+-- Create the directory if it doesn't exist yet
+if vim.fn.isdirectory(undo_path) == 0 then
+    vim.fn.mkdir(undo_path, "p")
+end
+
+vim.opt.undodir = undo_path
 
 -- highlight yanking
 vim.api.nvim_create_autocmd("TextYankPost", {
