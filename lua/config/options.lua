@@ -9,7 +9,7 @@ vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.opt.magic = false
 vim.opt.undofile = true
-
+vim.opt.colorcolumn = "100"
 -- Create a central directory for all undo files
 local undo_path = vim.fn.stdpath("data") .. "/undo"
 
