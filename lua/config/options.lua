@@ -1,3 +1,16 @@
+-- support for ssh
+vim.g.clipboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+  },
+  paste = {
+    ['+'] = function() return { vim.fn.split(vim.fn.getreg(''), '\n'), vim.fn.getregtype('') } end,
+    ['*'] = function() return { vim.fn.split(vim.fn.getreg(''), '\n'), vim.fn.getregtype('') } end,
+  },
+}
+
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -10,6 +23,7 @@ vim.opt.expandtab = true
 vim.opt.magic = false
 vim.opt.undofile = true
 vim.opt.colorcolumn = "100"
+vim.opt.conceallevel = 2
 -- Create a central directory for all undo files
 local undo_path = vim.fn.stdpath("data") .. "/undo"
 
