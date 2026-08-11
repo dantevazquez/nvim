@@ -1,5 +1,7 @@
 undo/
-lua/
+lua/*
+!lua/config/
+!lua/config/**
 .DS_Store
 nvim.log
 nvim-pack-lock.json
