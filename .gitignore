@@ -1,6 +1,5 @@
-lazy-lock.json
-lua/plugins/colorscheme.lua
 undo/
-lua/matugen.lua
-lua/plugins/base16.lua
+lua/
 .DS_Store
+nvim.log
+nvim-pack-lock.json
