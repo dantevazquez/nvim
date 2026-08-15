@@ -5,3 +5,4 @@ lua/*
 .DS_Store
 nvim.log
 nvim-pack-lock.json
+plugin/colorscheme.lua
